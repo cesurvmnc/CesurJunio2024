@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Vinilos</title>
+    <link rel="stylesheet" href="proyecto.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+ 
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="media/diseno-logotipo-musica-vinilo_626969-116.jpg" alt="Logo de la página">
+            </a>
+        </div>
+ 
+        <ul id="menu-principal-3" class="menu">
+            <li><a class="active" href="proyecto.html">Inicio</a></li>
+            <li><a href="RAP.html" >Rap Americano</a></li>
+            <li><a href="UrbanoEspañol.html" >Urbano Español</a></li>
+            <li><a href="R&B.html" >R&B</a></li>
+            <li><a href="TECHNO.html" >Techno</a></li>
+        </ul>
+    </nav>
+    <div class="user-actions">
+        <a href="#" class="login-button">Iniciar sesión</a>
+    </div>
+    <div class="contenido">
+        <div class="galeria">
+          <div class="imagenes">
+            <img src="media/AfterHours/AfterHoursCover.jpg" alt="Foto 1">
+            <img src="media/AfterHours/weeknd-afterhours-blackvinyl-1.jpg" alt="Foto 2">
+          </div>
+          <div class="botones">
+            <button onclick="anteriorImagen()">Anterior</button>
+            <button onclick="siguienteImagen()">Siguiente</button>
+          </div>
+        </div>
+        <div class="texto">
+          <p class="primer-parrafo"><b></b>"After Hours" es el cuarto álbum de estudio del cantante canadiense The Weeknd, lanzado en 2020. Es un trabajo que explora temas de amor, pérdida, soledad y redención, con una atmósfera sonora que combina elementos de R&B, synth-pop y música electrónica. El álbum presenta una narrativa cohesiva que sigue al protagonista a través de una noche tumultuosa y emocional, desde las primeras etapas de euforia hasta la introspección y el arrepentimiento. Las letras melancólicas y oscuras reflejan las luchas internas y las experiencias turbulentas del personaje.
+            </p>
+          <p> <strong>TRACKLIST:</strong> </p>
+          <p class="segundo-parrafo"> <p>
+            1.Alone Again <br>
+            2.Too Late <br>
+            3.Hardest To Love <br>
+            4.Scared To Live <br>
+            5.Snowchild<br>
+            6.Escape From LA<br>
+            7.Heartless<br>
+            8.Faith <br>
+            9.Blinding Lights<br>
+            10.In Your Eyes<br>
+            11.Save Your Tears<br>
+            12.Repeat After Me (Interlude) <br>
+            13.After Hours <br>
+            14.Until I Bleed Out </p>
+        </p>
+          <p class="segundo-parrafo"><p></p>
+          <button>Comprar</button>
+          <br>
+        </div>
+    </div>
+    <script>
+        function anteriorImagen() {
+          var imagenes = document.querySelectorAll('.imagenes img');
+          var index = Array.from(imagenes).findIndex(img => img.style.display !== 'none');
+          imagenes[index].style.display = 'none';
+          if (index === 0) {
+            index = imagenes.length;
+          }
+          imagenes[index - 1].style.display = 'block';
+        }
+     
+        function siguienteImagen() {
+          var imagenes = document.querySelectorAll('.imagenes img');
+          var index = Array.from(imagenes).findIndex(img => img.style.display !== 'none');
+          imagenes[index].style.display = 'none';
+          if (index === imagenes.length - 1) {
+            index = -1;
+          }
+          imagenes[index + 1].style.display = 'block';
+        }
+      </script>
+    <footer>
+        <p>© 2024 Mi Empresa. Todos los derechos reservados.</p>
+    </footer>
+        
+</body>
+</html>
